@@ -67,7 +67,7 @@ Firebase announces new updates, including vector search for Firestore, Vertex AI
 
 ## Run Cloud Functions Emulator
 
-**Note:** To enable alpha components, run the following command:
+**Note**: To enable alpha components, run the following command:
 
 ```bash
 $ gcloud components install alpha
@@ -100,6 +100,26 @@ To remove the emulator, run the following command:
 
 ```bash
 $ make remove-emulator
+```
+
+### Deploy
+
+Follow these steps to deploy the function:
+
+```bash
+$ gcloud auth application-default login
+$ gcloud config set core/project [your-project-id]
+$ make deploy
+```
+
+**CAUTION**: This deployment uses `.env.yaml` for environment variables, including the API key. This is not recommended for production. Instead, use Google Cloud Secret Manager for better security.
+
+To test the deployed function, use the following curl command:
+
+```bash
+$ curl -X POST -H "Content-Type: application/json" \
+-d '{"url":"https://firebase.blog/posts/2024/04/next-announcements/"}' \
+https://us-central1-[your-project-id].cloudfunctions.net/summarize-function
 ```
 
 ### Code Formatting
