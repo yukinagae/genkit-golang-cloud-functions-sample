@@ -77,7 +77,7 @@ To run the emulator, set your secret values in `./.env.yaml`:
 
 ```bash
 $ cp -p ./.env.example.yaml ./.env.yaml
-$ vim ./.env.example.yaml # replace the secrets with your own values
+$ vim ./.env.yaml # replace the secrets with your own values
 GOOGLE_GENAI_API_KEY: your_api_key
 ```
 
