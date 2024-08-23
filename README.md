@@ -13,6 +13,7 @@
 - **Google Cloud CLI (gcloud)**: Follow the [Google Cloud - Install the gcloud CLI](https://cloud.google.com/sdk/docs/install) to install gcloud.
 - **Docker**: Follow the [Docker - Install Docker Engine](https://docs.docker.com/engine/install/) to install Docker.
 - **Pack**: Follow the [Buildpacks.io - Pack](https://buildpacks.io/docs/for-platform-operators/how-to/integrate-ci/pack/) to install Pack.
+- **golangci-lint**: Follow the [golangci-lint - Install](https://golangci-lint.run/welcome/install/) to install golangci-lint.
 
 Verify your installations:
 
@@ -34,6 +35,8 @@ $ docker ps # make sure docker is running
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 $ pack --version
 0.35.1+git-3a22a7f.build-6099
+$ golangci-lint --version
+golangci-lint has version 1.60.3 built with go1.23.0 from c2e095c on 2024-08-22T21:45:24Z
 ```
 
 ## Usage

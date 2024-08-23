@@ -45,8 +45,9 @@ deploy:
 		--trigger-http \
 		--allow-unauthenticated
 
-## tidy: Tidy modfiles and format .go files
+## tidy: Tidy modfiles, format and lint .go files
 .PHONY: tidy
 tidy:
 	go mod tidy -v
 	go fmt ./...
+	golangci-lint run
